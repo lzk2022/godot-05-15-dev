@@ -1,0 +1,6 @@
+add_subdirectory(core/brotli)
+add_subdirectory(core/clipper2)
+add_subdirectory(core/minizip)
+add_subdirectory(core/misc)
+add_subdirectory(core/zlib)
+add_subdirectory(core/zstd)

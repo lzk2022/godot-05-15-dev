@@ -1,0 +1,20 @@
+*.vscode
+build
+*.exe
+*.dll
+*.pdb
+*.log
+*.obj
+*.lib
+*.pyc
+monitor.log
+data
+# custom
+
+
+# thirdparty
+# monitor
+# drivers
+# main
+back
+SCsub*
