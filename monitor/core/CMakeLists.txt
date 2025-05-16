@@ -11,6 +11,12 @@ set(EXCLUDE_DIRS
 
 # 要排除的文件列表
 set(EXCLUDE_FILES
+
+    # core/error/error_macros.cpp
+    # core/extension/extension_api_dump.cpp
+    # core/math/random_pcg.cpp
+    # core/math/random_number_generator.cpp
+    # core/string/translation_server.cpp
 )
 
 include(${CMAKE_SOURCE_DIR}/cmake/utils.cmake)
@@ -39,6 +45,7 @@ target_link_libraries(${LIB_NAME} PRIVATE
 # 包含头文件目录
 target_include_directories(${LIB_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/
+    ${CMAKE_SOURCE_DIR}/
 
     # ${CMAKE_SOURCE_DIR}/thirdparty
     # ${CMAKE_SOURCE_DIR}/thirdparty/thirdparty/mbedtls/include
@@ -46,12 +53,11 @@ target_include_directories(${LIB_NAME} PUBLIC
 
 target_compile_definitions(${LIB_NAME} PUBLIC
 
-    # TOOLS_ENABLED
-    # DEBUG_METHODS_ENABLED
-    # TYPED_METHOD_BIND
-    # DEBUG_ENABLED
-    # THREADS_ENABLED
-    # MINIZIP_ENABLED
-    # VERSION_PATCH
-    # MBEDTLS_CONFIG_FILE="thirdparty/mbedtls/include/godot_module_mbedtls_config.h"
+    TOOLS_ENABLED
+    DEBUG_METHODS_ENABLED
+    TYPED_METHOD_BIND
+    DEBUG_ENABLED
+    THREADS_ENABLED
+    MINIZIP_ENABLED
+    VERSION_PATCH
 )
