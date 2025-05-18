@@ -51,3 +51,4 @@ get_filename_component(GODOT_BASE_DIR "${PARENT_DIR}" DIRECTORY)
 
 add_subdirectory(thirdparty)
 add_subdirectory(core)
+add_subdirectory(tests)
